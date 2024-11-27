@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -51,13 +50,13 @@ main {
 
 @media (max-width: 768px) {
     .logo img {
-        width: 150px; /* Зменшуємо логотип для планшетів */
+        width: 150px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        width: 100px; /* Ще менший розмір для мобільних */
+        width: 100px;
     }
 }
 
@@ -92,19 +91,19 @@ main {
 }
 
 .banner img {
-    width: 200px; /* Стандартна ширина */
-    height: auto; /* Зберігає пропорції */
+    width: 200px;
+    height: auto;
 }
 
 @media (max-width: 768px) {
     .banner img {
-        width: 150px; /* Зменшуємо логотип для планшетів */
+        width: 150px;
     }
 }
 
 @media (max-width: 480px) {
     .banner img {
-        width: 80px; /* Ще менший розмір для мобільних */
+        width: 80px;
     }
 }
 
@@ -239,8 +238,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-    width: 1850px;
     justify-content: space-between;
 }
 
@@ -255,7 +252,7 @@ main {
 }
 
 .nextRightItems a {
-    font-size: 12px;
+    font-size: 1vw;
     color: #ffffff;
     text-decoration: none;
 }
@@ -273,6 +270,7 @@ main {
     background-color: #185426;
     color: #7D7F7E;
     font-weight: 900;
+    cursor: pointer;
 }
 
 .input-container {
@@ -283,7 +281,7 @@ main {
 }
 
 .input-container input {
-    width: 300px;
+    width: 20vw;
     padding-right: 10px;
     padding-left: 10px;
     height: 40px;
@@ -308,8 +306,6 @@ main {
 .input-container button img {
     max-width: 24px;
     max-height: 24px;
-    margin: auto;
-    display: block;
 }
 
 .nextLinks {
@@ -328,7 +324,7 @@ main {
 
 .nextLinks ul li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.7vw;
     font-weight: 700;
     color: #ffffff;
 }
@@ -339,4 +335,107 @@ main {
 
 .nextLinks ul li:last-child a {
     color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .nextLogoContainer img {
+        width: 70px;
+    }
+
+    .nextRightItems a img {
+        width: 18px;
+    }
+
+    .nextRightItems button {
+        font-size: 1vw;
+        width: 15vw;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .nextLogoContainer img {
+        width: 50px;
+    }
+}
+
+/* Next Footer */
+
+.footer-2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.socialNetworkIcon a img {
+    margin: 8px;
+    gap: 10px;
+}
+
+.myAccount {
+    display: flex;
+    text-align: left;
+    padding: 12px 10%;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.myAccount img {
+    margin-right: 20px;
+}
+
+.myAccount a {
+    text-decoration: none;
+    color: #515151;
+    font-size: 12px;
+    line-height: 18px;
+    width: fit-content;
+}
+
+.myAccount a b {
+    color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.myAccount a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.nextFooterLinks {
+    display: flex;
+    background-color: #f7f7f7;
+    padding: 10px 10%;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.nextFooterLinks ul {
+    list-style-type: none;
+}
+
+.nextFooterLinks a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+}
+
+.nextFooterLinks ul li {
+    margin-bottom: 15px;
+}
+
+.nextFooterLinks p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.timer {
+    font-size: 24px;
+    color: #ff5722;
+    margin-top: 20px;
 }
