@@ -3,21 +3,21 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    max-width: 1850px;
+    max-width: 1900px;
+    box-sizing: border-box;
 }
 
 main {
-    padding: 20px;
     justify-content: center;
     text-align: center;
 }
 
 .content {
-    width: 100%; /* Контейнер займає всю доступну ширину */
-    max-width: 100%; /* Прибирає будь-які обмеження ширини */
-    margin: 0; /* Видаляє зовнішні відступи */
-    padding: 0; /* Видаляє внутрішні відступи */
-    box-sizing: border-box; /* Враховує padding і border у ширину */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .content p {
@@ -25,27 +25,22 @@ main {
     width: 100%;
 }
 
-.header, .footer {
-    display: none;
-    width: 100%;
-    padding: 10px 30px;
-    background-color: #ffffff;
-    position: fixed;
-    left: 0;
-    z-index: 10;
-}
-
-.header.active {
+.header-1 {
     display: block;
-    max-width: 1850px;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 10px;
     top: 0;
     border-bottom: solid 1px #d1d1d1;
+    position: fixed;
+    background-color: #ffffff;
 }
 
 .rakutenHeaderTopRow {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .logo img {
@@ -130,7 +125,7 @@ main {
     color: #333333;
 }
 
-.footer.active {
+.footer-1 {
     display: flex;
     bottom: 0;
     position: inherit;
@@ -223,4 +218,125 @@ main {
 
 #scrollTop:hover {
     background-color: #0056b3;
+}
+
+/* Next */
+
+.header-2 {
+    display: block;
+    width: 100%;
+    padding: 10px 10%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.containerNext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 1850px;
+    justify-content: space-between;
+}
+
+.nextLeftItems {
+    display: flex;
+    align-items: center;
+}
+
+.nextRightItems {
+    align-items: center;
+    text-align: center;
+}
+
+.nextRightItems a {
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nextRightItems a img {
+    align-items: center;
+    vertical-align: middle;
+}
+
+.nextRightItems button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #185426;
+    color: #7D7F7E;
+    font-weight: 900;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-container input {
+    width: 300px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.input-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.input-container button img {
+    max-width: 24px;
+    max-height: 24px;
+    margin: auto;
+    display: block;
+}
+
+.nextLinks {
+    padding: 10px 10%;
+}
+
+.nextLinks ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nextLinks ul li {
+    margin: 0 3%;
+}
+
+.nextLinks ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nextLinks ul li:nth-child(1) a {
+    color: #B78B1F;
+}
+
+.nextLinks ul li:last-child a {
+    color: #ff0000;
 }

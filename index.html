@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header1" class="header active">
+    <!-- <header id="header-1" class="header-1">
         <div class="header-content">
              <div class="rakutenHeaderTopRow">
                 <div class="logo">
@@ -33,13 +33,43 @@
                 <a href="#" class="cart-icon"><img src="/images/shopping-cart.png" alt="shopping cart icon" width="24">Panier</a>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <!-- Header from Next -->
-    <header id="header2 " class="header">
-        <!-- Add HTML structure for Next header here -->
-        <div class="header-content">
-            <h1>Next Header</h1>
+    <header id="header-2" class="header-2">
+        <div class="containerNext">
+            <div class="nextLeftItems">
+                <div class="nextLogoContainer">
+                    <img src="/images/next-logo.png" alt="next logo" width="100">
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="Search product or brand">
+                    <button type="submit">
+                        <img src="/images/black-search-icon.jpg" alt="Search" width="25">
+                    </button>
+                </div>
+            </div>
+            <div class="nextRightItems">
+                <a href="#">My Account <img src="/images/white-human.png" alt="human" width="25"></a>
+                <a href="#"><img src="/images/white-heart.png" alt="heart" width="30"></a>
+                <a href="#"><img src="/images/shopper.png" alt="shopper" width="25"></a>
+                <button>CHECKOUT</button>
+                <a href="#"><img src="/images/ireland.png" alt="ireland flag" width="25"></a>
+            </div>
+        </div>
+        <div class="nextLinks">
+            <ul>
+                <li><a href="#">CHRISTMAS</a></li>
+                <li><a href="#">WOMAN</a></li>
+                <li><a href="#">MEN'S</a></li>
+                <li><a href="#">GIRLS</a></li>
+                <li><a href="#">BOYS</a></li>
+                <li><a href="#">BABY</a></li>
+                <li><a href="#">SHOES</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">BRANDS</a></li>
+                <li><a href="#">CLEARANCE</a></li>
+            </ul>
         </div>
     </header>
 
@@ -55,7 +85,7 @@
     </main>
 
     <!-- Footer from Rakuten -->
-    <footer id="footer1" class="footer active">
+    <footer id="footer-1" class="footer-1">
         <div class="footer-content">
             <div class="rakutenFooterTopRow">
                 <a href="#"><img src="/images/rakuten-logo.png" alt="rakuten logo" width="100"></a>
@@ -101,7 +131,7 @@
     </footer>
 
     <!-- Footer from Next -->
-    <footer id="footer2" class="footer">
+    <footer id="footer-2" class="footer-2 hidden">
         <!-- Add HTML structure for Next footer here -->
         <div class="footer-content">
             <p>Next Footer</p>
@@ -111,5 +141,104 @@
     <button id="scrollTop">Scroll to Top</button>
 
     <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Headers and Footers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        /* .header-1 {
+            background-color: #007bff;
+        }
+        .header-2 {
+            background-color: #28a745;
+        }
+        .footer-1 {
+            background-color: #6c757d;
+        }
+        .footer-2 {
+            background-color: #343a40;
+        } */
+        .hidden {
+            display: none;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .timer {
+            font-size: 24px;
+            color: #ff5722;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедери -->
+    <!-- <header id="header-1" class="header-1">Header 1: Welcome to Our Website!</header>
+    <header id="header-2" class="header-2 hidden">Header 2: Explore More Content!</header> -->
+
+    <!-- Основний контент -->
+    <main>
+        <p>Це сторінка з динамічним хедером і футером.</p>
+        <div class="timer">
+            Time left: <span id="countdown">10</span> seconds
+        </div>
+    </main>
+
+    <!-- Футери -->
+    <footer id="footer-1" class="footer-1">Footer 1: Thank you for visiting.</footer>
+    <footer id="footer-2" class="footer-2 hidden">Footer 2: Contact us for more info.</footer>
+
+    <!-- <script>
+        // Отримуємо елементи
+        const headers = [document.getElementById('header-1'), document.getElementById('header-2')];
+        const footers = [document.getElementById('footer-1'), document.getElementById('footer-2')];
+        const countdownElement = document.getElementById('countdown');
+
+        let currentIndex = 0; // Поточний індекс
+        let countdown = 10; // Таймер зворотного відліку
+
+        // Функція для перемикання хедерів і футерів
+        function switchHeaderFooter() {
+            // Ховаємо всі хедери і футери
+            headers.forEach(header => header.classList.add('hidden'));
+            footers.forEach(footer => footer.classList.add('hidden'));
+
+            // Відображаємо наступний хедер і футер
+            currentIndex = (currentIndex + 1) % headers.length;
+            headers[currentIndex].classList.remove('hidden');
+            footers[currentIndex].classList.remove('hidden');
+        }
+
+        // Функція для оновлення таймера
+        function updateTimer() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown === 0) {
+                countdown = 10; // Скидаємо таймер
+                switchHeaderFooter(); // Перемикаємо хедер і футер
+            }
+        }
+
+        // Запускаємо таймер, який оновлюється кожну секунду
+        setInterval(updateTimer, 1000);
+    </script> -->
 </body>
 </html>
