@@ -3,12 +3,26 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    max-width: 1900px;
+    max-width: 1850px;
 }
 
 main {
     padding: 20px;
-    min-height: 200vh; /* Enough content for scrolling */
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    width: 100%; /* Контейнер займає всю доступну ширину */
+    max-width: 100%; /* Прибирає будь-які обмеження ширини */
+    margin: 0; /* Видаляє зовнішні відступи */
+    padding: 0; /* Видаляє внутрішні відступи */
+    box-sizing: border-box; /* Враховує padding і border у ширину */
+}
+
+.content p {
+    text-align: justify;
+    width: 100%;
 }
 
 .header, .footer {
@@ -23,11 +37,12 @@ main {
 
 .header.active {
     display: block;
+    max-width: 1850px;
     top: 0;
     border-bottom: solid 1px #d1d1d1;
 }
 
-.topStr {
+.rakutenHeaderTopRow {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -102,7 +117,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1750px;
+    max-width: 100%;
 }
 
 .menu a img {
@@ -116,9 +131,74 @@ main {
 }
 
 .footer.active {
-    display: block;
+    display: flex;
     bottom: 0;
     position: inherit;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1800px;
+    border-top: 1px solid #d1d1d1;
+}
+
+.rakutenFooterTopRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rakutenFooterTopRow a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #777777;
+}
+
+.rakutenFooterTopRow select {
+    border-width: 1px;
+    border-color: #d1d1d1;
+    border-style: solid;
+    padding: 11px 22px 11px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #4a4a4a;
+    width: 150px;
+    height: 38px;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+}
+
+.copyright p {
+    padding: 10px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.offersLinks {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offersLinks ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.offersLinks ul li {
+    margin: 0px 12px;
+}
+
+.offersLinks ul li a {
+    font-size: 12px;
+    color: #000000;
+    margin: 12px;
 }
 
 .timer-block {
@@ -128,10 +208,9 @@ main {
     font-weight: bold;
 }
 
-/* Scroll to Top Button */
 #scrollTop {
     position: fixed;
-    bottom: 100px;
+    bottom: 200px;
     right: 20px;
     padding: 10px 20px;
     font-size: 16px;
