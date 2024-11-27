@@ -437,5 +437,13 @@ main {
 .timer {
     font-size: 24px;
     color: #ff5722;
-    margin-top: 20px;
+    margin-top: 300px;
+}
+
+.hidden {
+    display: none;
+}
+main {
+    padding: 20px;
+    text-align: center;
 }

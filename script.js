@@ -1,33 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let timerElement = document.getElementById("timer");
-    let header1 = document.getElementById("header1");
-    let header2 = document.getElementById("header2");
-    let footer1 = document.getElementById("footer1");
-    let footer2 = document.getElementById("footer2");
+        // Отримуємо елементи
+        const headers = [document.getElementById('header-1'), document.getElementById('header-2')];
+        const footers = [document.getElementById('footer-1'), document.getElementById('footer-2')];
+        const countdownElement = document.getElementById('countdown');
 
-    let scrollTopButton = document.getElementById("scrollTop");
-    scrollTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+        let currentIndex = 0; // Поточний індекс
+        let countdown = 90; // Таймер зворотного відліку
 
-    // Timer Logic
-    let timerDuration = 90; // 1.5 minutes in seconds
-    let timerInterval = setInterval(() => {
-        let minutes = Math.floor(timerDuration / 60);
-        let seconds = timerDuration % 60;
+        // Функція для перемикання хедерів і футерів
+        function switchHeaderFooter() {
+            // Ховаємо всі хедери і футери
+            headers.forEach(header => header.classList.add('hidden'));
+            footers.forEach(footer => footer.classList.add('hidden'));
 
-        timerElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-
-        if (timerDuration <= 0) {
-            // Switch Headers and Footers
-            header1.classList.toggle("active");
-            header2.classList.toggle("active");
-            footer1.classList.toggle("active");
-            footer2.classList.toggle("active");
-
-            timerDuration = 90; // Restart timer
-        } else {
-            timerDuration--;
+            // Відображаємо наступний хедер і футер
+            currentIndex = (currentIndex + 1) % headers.length;
+            headers[currentIndex].classList.remove('hidden');
+            footers[currentIndex].classList.remove('hidden');
         }
-    }, 1000);
-});
+
+        // Функція для оновлення таймера
+        function updateTimer() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown === 0) {
+                countdown = 90; // Скидаємо таймер
+                switchHeaderFooter(); // Перемикаємо хедер і футер
+            }
+        }
+
+        // Запускаємо таймер, який оновлюється кожну секунду
+        setInterval(updateTimer, 1000);
